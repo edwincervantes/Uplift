@@ -6,7 +6,7 @@ from datetime import date
 
 # Create your models here.
 
-class Profile(models.Model):
+class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     dateJoined = models.DateField(default=date.today)
     daysClean = models.PositiveSmallIntegerField(default=0)
@@ -14,12 +14,3 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
-
-@receiver(post_save, sender=User)
-
-def create_or_update_user_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
-    instance.profile.save()
-
-
