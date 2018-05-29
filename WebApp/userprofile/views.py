@@ -30,4 +30,4 @@ def createAccount(request):
     else:
         form = UserCreationForm()
         form2 = SecurityQuestionForm()
-    return render(request, 'uplift/createAccount.html', {'form': form, 'response': response, 'form2': form2})
+    return render(request, 'userprofile/createAccount.html', {'form': form, 'response': response, 'form2': form2})

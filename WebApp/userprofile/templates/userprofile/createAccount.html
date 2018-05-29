@@ -1,17 +1,9 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block body %}
 <hr>
 <div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
 <form method = "post">
-<br/>
-    <br/>
-    <br/>
-    <br/>
   <h2>Create Account</h2>
   {% csrf_token %}
   {{ form.as_p }}
