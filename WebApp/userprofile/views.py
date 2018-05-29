@@ -21,9 +21,9 @@ def createAccount(request):
             login(request, user)
             request.session['name'] = username
             user = User.objects.get(username=username)
-            user.profile.securityQuestion1 = form2.cleaned_data.get('q1')
-            user.profile.securityQuestion2 = form2.cleaned_data.get('q2')
+            user.profile.securityQuestion1 = "Why aren't you working?"
             user.profile.securityAnswer1 = form2.cleaned_data.get('a1')
+            user.profile.securityQuestion2 = form2.cleaned_data.get('q2')
             user.profile.securityAnswer2 = form2.cleaned_data.get('a2')
             user.save()
             return redirect('/uplift/')
