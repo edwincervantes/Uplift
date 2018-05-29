@@ -11,7 +11,7 @@ Database - Will be using PostgresSQL hosted on AWS.
 	https://www.pgadmin.org/
 
 WebApp - Will be built using Django framework which is a Python based framework.
-	 Django admin login: admin
+	 Django admin login: HeroinHeros
 			     Uplift123 
 	
 	https://www.djangoproject.com/
