@@ -9,7 +9,7 @@ import datetime
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    firstDayClean = models.DateTimeField(default=datetime.datetime.now())
+    daysClean = models.IntegerField(default=0)
     #supporting = ArrayField(models.CharField(max_length=500, blank=True))
     securityQuestion1 = models.CharField(max_length=500)
     securityQuestion2 = models.CharField(max_length=500)
