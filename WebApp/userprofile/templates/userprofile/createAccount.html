@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<hr>
+<div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+<form method = "post">
+<br/>
+    <br/>
+    <br/>
+    <br/>
+  <h2>Create Account</h2>
+  {% csrf_token %}
+  {{ form.as_p }}
+    {{ form2.as_p }}
+    <br/>
+    <br/>
+  <button type = "submit">Submit</button>
+  {{ response }}
+</form>
+    <br/>
+{% endblock %}
+</div>
